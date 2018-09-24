@@ -14,6 +14,20 @@ gitlab-runner - With automatic import from CA( registry docker and gitlab server
 ```
   3. Run make... :)
 
+### Register (gitlab server)
+docker run --rm -t -i -v $(pwd)/config-runner:/etc/gitlab-runner --name gitlab-runner dirceusilva/gitlab-runner register
+
+### Run!
+
+
+```
+docker run -d --name gitlab-runner --restart always \
+  -v $(pwd)/config-runner:/etc/gitlab-runner \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  gitlab/gitlab-runner:latest
+
+```
+
 
 # WARNING!!!!
 ```
