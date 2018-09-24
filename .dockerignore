@@ -2,3 +2,6 @@
 Makefile
 .version
 .git
+.config-runner*
+config-runner/*
+config-runner*
